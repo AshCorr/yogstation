@@ -231,6 +231,7 @@ var/next_external_rsc = 0
 	if(ckey in donators)
 		prefs.unlock_content |= 2
 		add_donor_verbs()
+		prefs.update_character_slots(src)
 	else
 		prefs.unlock_content &= ~2
 		if(prefs.toggles & QUIET_ROUND)
